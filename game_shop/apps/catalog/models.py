@@ -7,7 +7,7 @@ class Game(models.Model):
     data_create = models.DateField()
     picture = models.ImageField(blank=True)
     price = models.DecimalField(
-        max_digits=4,
+        max_digits=8,
         decimal_places=2,
         )
     game_devel = models.ForeignKey(
@@ -35,3 +35,5 @@ class GameDevelopers(models.Model):
     
     def __str__(self):
         return self.game_dev
+
+
